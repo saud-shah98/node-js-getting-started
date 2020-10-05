@@ -28,7 +28,7 @@ app.get('/api/search', (req,res) => {
 })
 
 app.get('/', (req,res) => {
-  res.sendFile(path.join(__dirname,'.', 'index.html'))
+  console.log(res.json(data));
 })
 
 app.listen(3000,()=> console.log("Application started on port 3000"))
