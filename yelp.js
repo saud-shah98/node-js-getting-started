@@ -1,4 +1,4 @@
-const axios = requre("axios");
+const axios = require("axios");
 
 class Yelp {
 
