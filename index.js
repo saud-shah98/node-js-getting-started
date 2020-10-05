@@ -1,5 +1,6 @@
   
 var fs = require('fs')
+require('dotenv').config();
 var path = require('path');
 var express = require('express');
 const Yelp = require('./yelp');
@@ -31,5 +32,5 @@ app.get('/', (req,res) => {
   console.log(res.json(data));
 })
 
-app.listen(3000,()=> console.log("Application started on port 3000"))
+app.listen(process.env.PORT || 3000,()=> console.log("Application started on port 3000"))
 
