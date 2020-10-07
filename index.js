@@ -20,7 +20,7 @@ app.get('/api/search', (req,res) => {
         error: 'No Phone Number'
       })
     }
-
+    res.json({phone: req.query.phone})
     yelp.search({phone})
     .then(data => {
       return res.json(data);
