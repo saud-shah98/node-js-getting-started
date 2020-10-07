@@ -8,8 +8,11 @@ const API_KEY = "FLMeJY8fzwqhc33W3NgcwHB3ivXaFmw3ImKNbySrooXJp7yC_nuytgj56g9zzHj
 const yelp = new Yelp({ apiKey: API_KEY  })
 
 var app = express();
+let settings = (res) => {res.setHeader('Access-Control-Allow-Origin', '*');}
 
 app.use(express.static('public'));
+app.use(settings);
+
 
 
 // Search
