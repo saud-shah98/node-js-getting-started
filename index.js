@@ -35,7 +35,7 @@ app.get('/api/search', (req,res) => {
    
     yelp.search({phone})
     .then(data => {
-      return res.json(data);
+      return res.send(JSON.stringify(data));
     })
     .catch(e => console.log("Error", e));  
 })
